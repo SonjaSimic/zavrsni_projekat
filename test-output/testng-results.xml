@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28734" started-at="2021-10-19T16:48:46 CEST" finished-at="2021-10-19T16:49:14 CEST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28734" started-at="2021-10-19T16:48:46 CEST" finished-at="2021-10-19T16:49:14 CEST">
+      <class name="tests.MealItemTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="beforeMethod" is-config="true" duration-ms="3501" started-at="2021-10-19T16:48:46 CEST" finished-at="2021-10-19T16:48:49 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="addMealToCart()[pri:0, instance:tests.MealItemTest@33f88ab]" name="addMealToCart" duration-ms="24344" started-at="2021-10-19T16:48:49 CEST" finished-at="2021-10-19T16:49:13 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMealToCart -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="afterMethod" is-config="true" duration-ms="826" started-at="2021-10-19T16:49:13 CEST" finished-at="2021-10-19T16:49:14 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.MealItemTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
