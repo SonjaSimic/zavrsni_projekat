@@ -6,8 +6,8 @@
       <class name="tests.MealItemTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="addMealToFavoriteTest"/>
           <include name="afterMethod"/>
+          <include name="clearCartTest"/>
         </methods>
       </class> <!-- tests.MealItemTest -->
     </classes>

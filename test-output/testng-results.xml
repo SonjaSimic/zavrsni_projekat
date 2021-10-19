@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20941" started-at="2021-10-19T18:12:11 CEST" finished-at="2021-10-19T18:12:32 CEST">
+  <suite name="Default suite" duration-ms="60897" started-at="2021-10-19T20:02:21 CEST" finished-at="2021-10-19T20:03:22 CEST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20941" started-at="2021-10-19T18:12:11 CEST" finished-at="2021-10-19T18:12:32 CEST">
+    <test name="Default test" duration-ms="60897" started-at="2021-10-19T20:02:21 CEST" finished-at="2021-10-19T20:03:22 CEST">
       <class name="tests.MealItemTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="beforeMethod" is-config="true" duration-ms="2629" started-at="2021-10-19T18:12:11 CEST" finished-at="2021-10-19T18:12:13 CEST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="beforeMethod" is-config="true" duration-ms="2888" started-at="2021-10-19T20:02:22 CEST" finished-at="2021-10-19T20:02:24 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addMealToFavoriteTest()[pri:0, instance:tests.MealItemTest@33f88ab]" name="addMealToFavoriteTest" duration-ms="17478" started-at="2021-10-19T18:12:13 CEST" finished-at="2021-10-19T18:12:31 CEST">
+        <test-method status="PASS" signature="clearCartTest()[pri:0, instance:tests.MealItemTest@33f88ab]" name="clearCartTest" duration-ms="57130" started-at="2021-10-19T20:02:24 CEST" finished-at="2021-10-19T20:03:22 CEST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addMealToFavoriteTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="afterMethod" is-config="true" duration-ms="776" started-at="2021-10-19T18:12:31 CEST" finished-at="2021-10-19T18:12:32 CEST">
+        </test-method> <!-- clearCartTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.MealItemTest@33f88ab]" name="afterMethod" is-config="true" duration-ms="811" started-at="2021-10-19T20:03:22 CEST" finished-at="2021-10-19T20:03:22 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

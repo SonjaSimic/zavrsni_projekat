@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import pages.AuthPage;
 import pages.CartSummaryPage;
@@ -26,7 +27,8 @@ public abstract class BasicTest {
 	protected JavascriptExecutor js;
 	protected WebElement element;
 	protected Actions action;
-	
+	protected SoftAssert sa;
+
 	protected LocationPopupPage locationPopupPage;
 	protected MealPage mealPage;
 	protected CartSummaryPage cartSummaryPage;
@@ -36,19 +38,18 @@ public abstract class BasicTest {
 	protected AuthPage authPage;
 
 //	URL's
-	
+
 	protected String baseUrl = "http://demo.yo-meals.com/";
 	protected String loginPageUrl = "http://demo.yo-meals.com/guest-user/login-form";
 	protected String profilePageUrl = "http://demo.yo-meals.com/member/profile";
 	protected String mealPageUrl = "http://demo.yo-meals.com/meals";
 	protected String mealChicken = "http://demo.yo-meals.com/meal/lobster-shrimp-chicken-quesadilla-combo";
-	
+
 // Credentials 
-	
+
 	protected String email = "customer@dummyid.com";
 	protected String password = "12345678a";
-	
-	
+
 	@BeforeMethod
 	public void beforeMethod() {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
@@ -56,11 +57,12 @@ public abstract class BasicTest {
 		action = new Actions(driver);
 		wait = new WebDriverWait(driver, 10);
 		js = (JavascriptExecutor) driver;
+		sa = new SoftAssert();
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
-		
 		locationPopupPage = new LocationPopupPage(driver, element, wait, js, action);
 		mealPage = new MealPage(driver, element, wait, js, action);
 		cartSummaryPage = new CartSummaryPage(driver, element, wait, js, action);
@@ -69,7 +71,7 @@ public abstract class BasicTest {
 		profilePage = new ProfilePage(driver, element, wait, js, action);
 		authPage = new AuthPage(driver, element, wait, js, action);
 	}
-	
+
 	@AfterMethod
 	public void afterMethod() {
 		driver.quit();

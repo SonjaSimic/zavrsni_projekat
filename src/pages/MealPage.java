@@ -14,15 +14,19 @@ public class MealPage extends BasicPage {
 		super(driver, element, wait, js, action);
 		// TODO Auto-generated constructor stub
 	}
+
 	public WebElement getAddToCartBtn() {
 		return driver.findElement(By.xpath("//*[@class= 'btn btn--primary btn--large js-proceedtoAddInCart ']"));
 	}
+
 	public WebElement getQty() {
 		return driver.findElement(By.xpath("//*[@name= 'product_qty']"));
 	}
+
 	public WebElement getFavoriteBtn() {
 		return driver.findElement(By.xpath("//i[@class = 'svg-icn']/.."));
 	}
+
 	public void addMealToCart(String quantity) throws InterruptedException {
 		this.getQty().click();
 		this.getQty().sendKeys(Keys.BACK_SPACE);
@@ -30,7 +34,7 @@ public class MealPage extends BasicPage {
 		this.getQty().sendKeys(quantity);
 		this.getAddToCartBtn().click();
 	}
-	
+
 	public void addMealToFavorite() {
 		this.getFavoriteBtn().click();
 	}
