@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,14 +21,18 @@ public class MealPage extends BasicPage {
 		return driver.findElement(By.xpath("//*[@name= 'product_qty']"));
 	}
 	public WebElement getFavoriteBtn() {
-		return driver.findElement(By.xpath("//*[@class= 'svg-icn']"));
+		return driver.findElement(By.xpath("//i[@class = 'svg-icn']/.."));
 	}
 	public void addMealToCart(String quantity) throws InterruptedException {
 		this.getQty().click();
-		this.getQty().clear();
+		this.getQty().sendKeys(Keys.BACK_SPACE);
 		Thread.sleep(2000);
 		this.getQty().sendKeys(quantity);
 		this.getAddToCartBtn().click();
+	}
+	
+	public void addMealToFavorite() {
+		this.getFavoriteBtn().click();
 	}
 
 }
